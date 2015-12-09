@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qYmo8J5YEeWTvImi9CrFGg" name="ClassDiagram">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qYmo8J5YEeWTvImi9CrFGg" name="ClassDiagram">
   <packagedElement xmi:type="uml:Class" xmi:id="_u19TIJ5aEeWkJphyxrIkmg" name="API"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__3b3IJ5aEeWkJphyxrIkmg" name="SearchService"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="StatisticsService"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_HaBe0J5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_84Me0J5aEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_H2ta0J5bEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="__3b3IJ5aEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_IZG9QJ5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_BXnQcJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVWJUJ5bEeWkJphyxrIkmg" name="PoliticalPartyMySQLRepository">
+    <generalization xmi:type="uml:Generalization" xmi:id="_s-LcsJ5bEeWkJphyxrIkmg" general="_qoBdoJ5bEeWkJphyxrIkmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Quy10J5bEeWkJphyxrIkmg" name="java.sql"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_SlvwYJ5bEeWkJphyxrIkmg" name="jdbc"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Vh3jQJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_SlvwYJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_WGQpwJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iN1fkJ5bEeWkJphyxrIkmg" name="PoliticalParty"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nH3woJ5bEeWkJphyxrIkmg" name="PoliticalTweet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_UaGNcJ5cEeWkJphyxrIkmg" general="_SdA1sJ5cEeWkJphyxrIkmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_qoBdoJ5bEeWkJphyxrIkmg" name="PoliticalPartyRepository"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_wKEJ4J5bEeWkJphyxrIkmg" client="_qoBdoJ5bEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_6lniwJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_76HQgJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_9ew6IJ5bEeWkJphyxrIkmg" client="__3b3IJ5aEeWkJphyxrIkmg" supplier="_nH3woJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_-qY_wJ5bEeWkJphyxrIkmg" client="_BXnQcJ5bEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_AOcMcJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_qYmo8J5YEeWTvImi9CrFGg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F4dI8J5cEeWkJphyxrIkmg" name="Statistic"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Gl1zYJ5cEeWkJphyxrIkmg" name="org.springframework.social.twitter.api">
+    <packagedElement xmi:type="uml:Class" xmi:id="_SdA1sJ5cEeWkJphyxrIkmg" name="Tweet"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_KrZ6kJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_MB2JEJ5cEeWkJphyxrIkmg" client="_BXnQcJ5bEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_w-k6kJ5cEeWkJphyxrIkmg" memberEnd="_w_gHoJ5cEeWkJphyxrIkmg _w_hVwJ5cEeWkJphyxrIkmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w-pMAJ5cEeWkJphyxrIkmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w-pzEJ5cEeWkJphyxrIkmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_w_hVwJ5cEeWkJphyxrIkmg" name="politicalparty" type="_iN1fkJ5bEeWkJphyxrIkmg" association="_w-k6kJ5cEeWkJphyxrIkmg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_w_gHoJ5cEeWkJphyxrIkmg" name="statistic" type="_F4dI8J5cEeWkJphyxrIkmg" association="_w-k6kJ5cEeWkJphyxrIkmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z-JDAJ5cEeWkJphyxrIkmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-87UJ5cEeWkJphyxrIkmg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
 </uml:Model>
