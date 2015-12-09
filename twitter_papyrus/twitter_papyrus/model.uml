@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qYmo8J5YEeWTvImi9CrFGg" name="ClassDiagram">
-  <packagedElement xmi:type="uml:Class" xmi:id="_u19TIJ5aEeWkJphyxrIkmg" name="API"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_u19TIJ5aEeWkJphyxrIkmg" name="API">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sEX08J5dEeWkJphyxrIkmg" name="search">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_yVtlQJ5fEeWkJphyxrIkmg" name="query" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Zuv4J5fEeWkJphyxrIkmg" name="list" type="_nH3woJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3HZyoJ5fEeWkJphyxrIkmg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3Hbn0J5fEeWkJphyxrIkmg" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4UR1cJ5fEeWkJphyxrIkmg" name="getPolitcalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Akms4J5gEeWkJphyxrIkmg" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_D_BlUJ5gEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9A8_8J5fEeWkJphyxrIkmg" name="getPoliticalParties">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IKdD8J5gEeWkJphyxrIkmg" name="list" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JAyPAJ5gEeWkJphyxrIkmg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JA0EMJ5gEeWkJphyxrIkmg" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KTWDEJ5gEeWkJphyxrIkmg" name="addPoliticalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VMy44J5gEeWkJphyxrIkmg" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    </ownedOperation>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="__3b3IJ5aEeWkJphyxrIkmg" name="SearchService"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="StatisticsService"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__3b3IJ5aEeWkJphyxrIkmg" name="SearchService">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wjVTkJ5dEeWkJphyxrIkmg" name="search">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6lZYJ5fEeWkJphyxrIkmg" name="query" type="_kliPYJ5eEeWkJphyxrIkmg">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_A6lZYZ5fEeWkJphyxrIkmg" name="empty" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UXOYQJ5fEeWkJphyxrIkmg" name="list" type="_nH3woJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZBLl8J5fEeWkJphyxrIkmg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZBNbIJ5fEeWkJphyxrIkmg" value="*"/>
+        <defaultValue xmi:type="uml:LiteralNull" xmi:id="_UXOYQZ5fEeWkJphyxrIkmg" name="list"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_HaBe0J5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_84Me0J5aEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_H2ta0J5bEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="__3b3IJ5aEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_IZG9QJ5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_BXnQcJ5bEeWkJphyxrIkmg"/>
@@ -14,20 +46,58 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_SlvwYJ5bEeWkJphyxrIkmg" name="jdbc"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_Vh3jQJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_SlvwYJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_WGQpwJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_iN1fkJ5bEeWkJphyxrIkmg" name="PoliticalParty"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iN1fkJ5bEeWkJphyxrIkmg" name="PoliticalParty">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_18nIkJ5hEeWkJphyxrIkmg" name="name" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8avpoJ5hEeWkJphyxrIkmg" name="statistics" visibility="private" type="_F4dI8J5cEeWkJphyxrIkmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__kGAMJ5hEeWkJphyxrIkmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__kIccJ5hEeWkJphyxrIkmg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EXzm0J5iEeWkJphyxrIkmg" name="web" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_nH3woJ5bEeWkJphyxrIkmg" name="PoliticalTweet">
     <generalization xmi:type="uml:Generalization" xmi:id="_UaGNcJ5cEeWkJphyxrIkmg" general="_SdA1sJ5cEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_seOGEJ5iEeWkJphyxrIkmg" name="text"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_qoBdoJ5bEeWkJphyxrIkmg" name="PoliticalPartyRepository"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_qoBdoJ5bEeWkJphyxrIkmg" name="PoliticalPartyRepository">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nDU1kJ5gEeWkJphyxrIkmg" name="getPoliticalPartyByName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_q-56UJ5gEeWkJphyxrIkmg" name="name"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-_QDMJ5gEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__lN3AJ5gEeWkJphyxrIkmg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__lPFIJ5gEeWkJphyxrIkmg" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KrxUsJ5hEeWkJphyxrIkmg" name="getPoliticalParties">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Qm3aIJ5hEeWkJphyxrIkmg" name="list" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RKQbEJ5hEeWkJphyxrIkmg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RKSQQJ5hEeWkJphyxrIkmg" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Wyq1EJ5hEeWkJphyxrIkmg" name="addPoliticalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_avgeEJ5hEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ht6aoJ5hEeWkJphyxrIkmg" name="updateStatistics">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kvgjYJ5hEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+    </ownedOperation>
+  </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_wKEJ4J5bEeWkJphyxrIkmg" client="_qoBdoJ5bEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_6lniwJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_76HQgJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_9ew6IJ5bEeWkJphyxrIkmg" client="__3b3IJ5aEeWkJphyxrIkmg" supplier="_nH3woJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_-qY_wJ5bEeWkJphyxrIkmg" client="_BXnQcJ5bEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_AOcMcJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_qYmo8J5YEeWTvImi9CrFGg"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_F4dI8J5cEeWkJphyxrIkmg" name="Statistic"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F4dI8J5cEeWkJphyxrIkmg" name="Statistic">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_blB7YJ5iEeWkJphyxrIkmg" name="date" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_e1TZUJ5iEeWkJphyxrIkmg" name="followers" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mbGtEJ5iEeWkJphyxrIkmg" name="tweets" visibility="private"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Gl1zYJ5cEeWkJphyxrIkmg" name="org.springframework.social.twitter.api">
-    <packagedElement xmi:type="uml:Class" xmi:id="_SdA1sJ5cEeWkJphyxrIkmg" name="Tweet"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SdA1sJ5cEeWkJphyxrIkmg" name="Tweet">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1fCmUJ5iEeWkJphyxrIkmg" name="text"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_44xiQJ5iEeWkJphyxrIkmg" name="retweets"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6Zj_kJ5iEeWkJphyxrIkmg" name="favs"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FVHHIJ5jEeWkJphyxrIkmg" name="user"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IOl1sJ5jEeWkJphyxrIkmg" name="date"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_KrZ6kJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
@@ -42,4 +112,28 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-87UJ5cEeWkJphyxrIkmg" value="*"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_myMJoJ5dEeWkJphyxrIkmg" name="Interaction1">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_n4XukJ5dEeWkJphyxrIkmg" name="" type="_u19TIJ5aEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pbaOoJ5dEeWkJphyxrIkmg" name="" type="__3b3IJ5aEeWkJphyxrIkmg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_n4XHgJ5dEeWkJphyxrIkmg" name="" represents="_n4XukJ5dEeWkJphyxrIkmg" coveredBy="_4UuzUJ5dEeWkJphyxrIkmg _-NeIUJ5dEeWkJphyxrIkmg _-NfWcJ5dEeWkJphyxrIkmg _-NevYJ5dEeWkJphyxrIkmg _RCr60J5eEeWkJphyxrIkmg _UOUJUJ5eEeWkJphyxrIkmg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_pbZnkJ5dEeWkJphyxrIkmg" name="" represents="_pbaOoJ5dEeWkJphyxrIkmg" coveredBy="_4UwogJ5dEeWkJphyxrIkmg _90dycJ5dEeWkJphyxrIkmg _90fAkJ5dEeWkJphyxrIkmg _90eZgJ5dEeWkJphyxrIkmg _UOUwYJ5eEeWkJphyxrIkmg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_M-fsoJ5eEeWkJphyxrIkmg" name="Servlet" coveredBy="_RCrTwJ5eEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RCrTwJ5eEeWkJphyxrIkmg" name="MessageSend" covered="_M-fsoJ5eEeWkJphyxrIkmg" message="_RCqFoJ5eEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RCr60J5eEeWkJphyxrIkmg" name="MessageRecv" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_RCqFoJ5eEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UOUJUJ5eEeWkJphyxrIkmg" name="Message0Send" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_UOSUIJ5eEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UOUwYJ5eEeWkJphyxrIkmg" name="Message0Recv" covered="_pbZnkJ5dEeWkJphyxrIkmg" message="_UOSUIJ5eEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-NeIUJ5dEeWkJphyxrIkmg" name="ActionExecSpec0Start" covered="_n4XHgJ5dEeWkJphyxrIkmg" execution="_-NevYJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_-NevYJ5dEeWkJphyxrIkmg" name="ActionExecSpec0" covered="_n4XHgJ5dEeWkJphyxrIkmg" finish="_-NfWcJ5dEeWkJphyxrIkmg" start="_-NeIUJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_90dycJ5dEeWkJphyxrIkmg" name="ActionExecSpecStart" covered="_pbZnkJ5dEeWkJphyxrIkmg" execution="_90eZgJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_90eZgJ5dEeWkJphyxrIkmg" name="ActionExecSpec" covered="_pbZnkJ5dEeWkJphyxrIkmg" finish="_90fAkJ5dEeWkJphyxrIkmg" start="_90dycJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4UuzUJ5dEeWkJphyxrIkmg" name="search_MessageSend" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_4UgJ0J5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4UwogJ5dEeWkJphyxrIkmg" name="search_MessageRecv" covered="_pbZnkJ5dEeWkJphyxrIkmg" message="_4UgJ0J5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_90fAkJ5dEeWkJphyxrIkmg" name="ActionExecSpecFinish" covered="_pbZnkJ5dEeWkJphyxrIkmg" execution="_90eZgJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-NfWcJ5dEeWkJphyxrIkmg" name="ActionExecSpec0Finish" covered="_n4XHgJ5dEeWkJphyxrIkmg" execution="_-NevYJ5dEeWkJphyxrIkmg"/>
+    <message xmi:type="uml:Message" xmi:id="_4UgJ0J5dEeWkJphyxrIkmg" name="search(String query)" receiveEvent="_4UwogJ5dEeWkJphyxrIkmg" sendEvent="_4UuzUJ5dEeWkJphyxrIkmg" signature="_wjVTkJ5dEeWkJphyxrIkmg"/>
+    <message xmi:type="uml:Message" xmi:id="_RCqFoJ5eEeWkJphyxrIkmg" name="new API()" messageSort="createMessage" receiveEvent="_RCr60J5eEeWkJphyxrIkmg" sendEvent="_RCrTwJ5eEeWkJphyxrIkmg"/>
+    <message xmi:type="uml:Message" xmi:id="_UOSUIJ5eEeWkJphyxrIkmg" name="new SearchService()" messageSort="createMessage" receiveEvent="_UOUwYJ5eEeWkJphyxrIkmg" sendEvent="_UOUJUJ5eEeWkJphyxrIkmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kliPYJ5eEeWkJphyxrIkmg" name="String"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_l4o2AJ5eEeWkJphyxrIkmg" name="DataType"/>
 </uml:Model>
