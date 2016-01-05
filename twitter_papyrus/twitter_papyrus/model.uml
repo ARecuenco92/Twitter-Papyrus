@@ -21,8 +21,13 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KTWDEJ5gEeWkJphyxrIkmg" name="addPoliticalParty">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_VMy44J5gEeWkJphyxrIkmg" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ep96oLOnEeWRj4_0AQBvoQ" name="monitorize"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6NGvoLOlEeWRj4_0AQBvoQ" name="monitorize"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nLPWULOnEeWRj4_0AQBvoQ" name="addMonitorization"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5vYm8LOnEeWRj4_0AQBvoQ" name="ok"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="__3b3IJ5aEeWkJphyxrIkmg" name="SearchService">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_wjVTkJ5dEeWkJphyxrIkmg" name="search">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6lZYJ5fEeWkJphyxrIkmg" name="query" type="_kliPYJ5eEeWkJphyxrIkmg">
@@ -35,7 +40,11 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ1eULOmEeWRj4_0AQBvoQ" name="getPolitcalParty"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yEdYELOmEeWRj4_0AQBvoQ" name="getPoliticalParties"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_z4zqkLOmEeWRj4_0AQBvoQ" name="addPoliticalParty"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_HaBe0J5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_84Me0J5aEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_H2ta0J5bEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="__3b3IJ5aEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_IZG9QJ5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_BXnQcJ5bEeWkJphyxrIkmg"/>
@@ -92,12 +101,31 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Gl1zYJ5cEeWkJphyxrIkmg" name="org.springframework.social.twitter.api">
     <packagedElement xmi:type="uml:Class" xmi:id="_SdA1sJ5cEeWkJphyxrIkmg" name="Tweet">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1fCmUJ5iEeWkJphyxrIkmg" name="text"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1fCmUJ5iEeWkJphyxrIkmg" name="text" type="_kliPYJ5eEeWkJphyxrIkmg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_44xiQJ5iEeWkJphyxrIkmg" name="retweets"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_6Zj_kJ5iEeWkJphyxrIkmg" name="favs"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_FVHHIJ5jEeWkJphyxrIkmg" name="user"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_IOl1sJ5jEeWkJphyxrIkmg" name="date"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Q0bpMLOjEeWRj4_0AQBvoQ" name="TwitterOperations">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hFnYsLOjEeWRj4_0AQBvoQ" name="consumerKey" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_iYNpALOjEeWRj4_0AQBvoQ" name="consumerSecret" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_i-xSsLOjEeWRj4_0AQBvoQ" name="accessToken" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_A-hD8LOkEeWRj4_0AQBvoQ" name="searchOperations"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5k8Y4LOkEeWRj4_0AQBvoQ" name="getUserProfile"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Gm5owLOkEeWRj4_0AQBvoQ" name="TwitterProfile">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hHyRALOlEeWRj4_0AQBvoQ" name="id"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oVdYoLOlEeWRj4_0AQBvoQ" name="screeName"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qDtDILOlEeWRj4_0AQBvoQ" name="name"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sKz5kLOlEeWRj4_0AQBvoQ" name="url"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tR1MALOlEeWRj4_0AQBvoQ" name="description"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MNCK0LOkEeWRj4_0AQBvoQ" name="getFavotitesCount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_y3m-MLOkEeWRj4_0AQBvoQ" name="getTweetsCount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JP0WULOlEeWRj4_0AQBvoQ" name="getFriendsCount"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_K4-sgLOlEeWRj4_0AQBvoQ" name="getFollowersCount"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_WU85MLOoEeWRj4_0AQBvoQ" name="new TwitterOperations()"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_KrZ6kJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
@@ -115,25 +143,56 @@
   <packagedElement xmi:type="uml:Interaction" xmi:id="_myMJoJ5dEeWkJphyxrIkmg" name="Interaction1">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_n4XukJ5dEeWkJphyxrIkmg" name="" type="_u19TIJ5aEeWkJphyxrIkmg"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_pbaOoJ5dEeWkJphyxrIkmg" name="" type="__3b3IJ5aEeWkJphyxrIkmg"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_n4XHgJ5dEeWkJphyxrIkmg" name="" represents="_n4XukJ5dEeWkJphyxrIkmg" coveredBy="_4UuzUJ5dEeWkJphyxrIkmg _-NeIUJ5dEeWkJphyxrIkmg _-NfWcJ5dEeWkJphyxrIkmg _-NevYJ5dEeWkJphyxrIkmg _RCr60J5eEeWkJphyxrIkmg _UOUJUJ5eEeWkJphyxrIkmg"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_pbZnkJ5dEeWkJphyxrIkmg" name="" represents="_pbaOoJ5dEeWkJphyxrIkmg" coveredBy="_4UwogJ5dEeWkJphyxrIkmg _90dycJ5dEeWkJphyxrIkmg _90fAkJ5dEeWkJphyxrIkmg _90eZgJ5dEeWkJphyxrIkmg _UOUwYJ5eEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_L_SiYLOnEeWRj4_0AQBvoQ" name="" type="_84Me0J5aEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Rwf2kLOoEeWRj4_0AQBvoQ" name="" type="_Q0bpMLOjEeWRj4_0AQBvoQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_n4XHgJ5dEeWkJphyxrIkmg" name="" represents="_n4XukJ5dEeWkJphyxrIkmg" coveredBy="_RCr60J5eEeWkJphyxrIkmg _UWlkgLOnEeWRj4_0AQBvoQ _1m2EQLOnEeWRj4_0AQBvoQ _5vulMbOnEeWRj4_0AQBvoQ _-NeIUJ5dEeWkJphyxrIkmg _-NevYJ5dEeWkJphyxrIkmg _-NfWcJ5dEeWkJphyxrIkmg"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_M-fsoJ5eEeWkJphyxrIkmg" name="Servlet" coveredBy="_RCrTwJ5eEeWkJphyxrIkmg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_L_R7ULOnEeWRj4_0AQBvoQ" name="" represents="_L_SiYLOnEeWRj4_0AQBvoQ" coveredBy="_UWmLkLOnEeWRj4_0AQBvoQ _vB5wkLOnEeWRj4_0AQBvoQ _0iPMoLOnEeWRj4_0AQBvoQ _1m2rULOnEeWRj4_0AQBvoQ _5vulMLOnEeWRj4_0AQBvoQ _-BGTwLOnEeWRj4_0AQBvoQ _-BKlMLOnEeWRj4_0AQBvoQ _WVQbMLOoEeWRj4_0AQBvoQ _fAAk0LOoEeWRj4_0AQBvoQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_RweocLOoEeWRj4_0AQBvoQ" name="" represents="_Rwf2kLOoEeWRj4_0AQBvoQ" coveredBy="_-BGTwLOnEeWRj4_0AQBvoQ _-BKlMLOnEeWRj4_0AQBvoQ _WVQbMbOoEeWRj4_0AQBvoQ _fABL4LOoEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WVQbMbOoEeWRj4_0AQBvoQ" name="new TwitterOperations()_MessageRecv" covered="_RweocLOoEeWRj4_0AQBvoQ" message="_WVP0ILOoEeWRj4_0AQBvoQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RCrTwJ5eEeWkJphyxrIkmg" name="MessageSend" covered="_M-fsoJ5eEeWkJphyxrIkmg" message="_RCqFoJ5eEeWkJphyxrIkmg"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RCr60J5eEeWkJphyxrIkmg" name="MessageRecv" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_RCqFoJ5eEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UOUJUJ5eEeWkJphyxrIkmg" name="Message0Send" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_UOSUIJ5eEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UOUwYJ5eEeWkJphyxrIkmg" name="Message0Recv" covered="_pbZnkJ5dEeWkJphyxrIkmg" message="_UOSUIJ5eEeWkJphyxrIkmg"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-NeIUJ5dEeWkJphyxrIkmg" name="ActionExecSpec0Start" covered="_n4XHgJ5dEeWkJphyxrIkmg" execution="_-NevYJ5dEeWkJphyxrIkmg"/>
     <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_-NevYJ5dEeWkJphyxrIkmg" name="ActionExecSpec0" covered="_n4XHgJ5dEeWkJphyxrIkmg" finish="_-NfWcJ5dEeWkJphyxrIkmg" start="_-NeIUJ5dEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_90dycJ5dEeWkJphyxrIkmg" name="ActionExecSpecStart" covered="_pbZnkJ5dEeWkJphyxrIkmg" execution="_90eZgJ5dEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_90eZgJ5dEeWkJphyxrIkmg" name="ActionExecSpec" covered="_pbZnkJ5dEeWkJphyxrIkmg" finish="_90fAkJ5dEeWkJphyxrIkmg" start="_90dycJ5dEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4UuzUJ5dEeWkJphyxrIkmg" name="search_MessageSend" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_4UgJ0J5dEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4UwogJ5dEeWkJphyxrIkmg" name="search_MessageRecv" covered="_pbZnkJ5dEeWkJphyxrIkmg" message="_4UgJ0J5dEeWkJphyxrIkmg"/>
-    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_90fAkJ5dEeWkJphyxrIkmg" name="ActionExecSpecFinish" covered="_pbZnkJ5dEeWkJphyxrIkmg" execution="_90eZgJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UWlkgLOnEeWRj4_0AQBvoQ" name="monitorService_MessageSend" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_UWIRgLOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UWmLkLOnEeWRj4_0AQBvoQ" name="monitorService_MessageRecv" covered="_L_R7ULOnEeWRj4_0AQBvoQ" message="_UWIRgLOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1m2EQLOnEeWRj4_0AQBvoQ" name="addMonitorization_MessageSend" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_1m1dMLOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_0iPMoLOnEeWRj4_0AQBvoQ" name="ActionExecSpec1" covered="_L_R7ULOnEeWRj4_0AQBvoQ" finish="_5vulMLOnEeWRj4_0AQBvoQ" start="_1m2rULOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1m2rULOnEeWRj4_0AQBvoQ" name="addMonitorization_MessageRecv" covered="_L_R7ULOnEeWRj4_0AQBvoQ" message="_1m1dMLOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5vulMLOnEeWRj4_0AQBvoQ" name="ok_MessageSend" covered="_L_R7ULOnEeWRj4_0AQBvoQ" message="_5vt-ILOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5vulMbOnEeWRj4_0AQBvoQ" name="ok_MessageRecv" covered="_n4XHgJ5dEeWkJphyxrIkmg" message="_5vt-ILOnEeWRj4_0AQBvoQ"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_-BGTwLOnEeWRj4_0AQBvoQ" name="CombinedFragment" covered="_L_R7ULOnEeWRj4_0AQBvoQ _RweocLOoEeWRj4_0AQBvoQ" interactionOperator="loop">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_-BKlMLOnEeWRj4_0AQBvoQ" name="InteractionOperand" covered="_L_R7ULOnEeWRj4_0AQBvoQ _RweocLOoEeWRj4_0AQBvoQ">
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fABL4LOoEeWRj4_0AQBvoQ" name="getUserProfile_MessageRecv" covered="_RweocLOoEeWRj4_0AQBvoQ" message="_e__9wLOoEeWRj4_0AQBvoQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WVQbMLOoEeWRj4_0AQBvoQ" name="new TwitterOperations()_MessageSend" covered="_L_R7ULOnEeWRj4_0AQBvoQ" message="_WVP0ILOoEeWRj4_0AQBvoQ"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fAAk0LOoEeWRj4_0AQBvoQ" name="getUserProfile_MessageSend" covered="_L_R7ULOnEeWRj4_0AQBvoQ" message="_e__9wLOoEeWRj4_0AQBvoQ"/>
+        <fragment xmi:type="uml:CombinedFragment" xmi:id="_WnDV0LOoEeWRj4_0AQBvoQ" name="CombinedFragment">
+          <operand xmi:type="uml:InteractionOperand" xmi:id="_WnD84LOoEeWRj4_0AQBvoQ" name="InteractionOperand">
+            <guard xmi:type="uml:InteractionConstraint" xmi:id="_WnD84bOoEeWRj4_0AQBvoQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_WnD84rOoEeWRj4_0AQBvoQ" value="undefined"/>
+              <maxint xmi:type="uml:LiteralInteger" xmi:id="_WnD85LOoEeWRj4_0AQBvoQ" value="1"/>
+              <minint xmi:type="uml:LiteralInteger" xmi:id="_WnD847OoEeWRj4_0AQBvoQ"/>
+            </guard>
+          </operand>
+        </fragment>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_-BMaYLOnEeWRj4_0AQBvoQ">
+          <specification xmi:type="uml:LiteralString" xmi:id="_-BNBcLOnEeWRj4_0AQBvoQ" value="undefined"/>
+          <maxint xmi:type="uml:LiteralInteger" xmi:id="_-BNBcrOnEeWRj4_0AQBvoQ" value="1"/>
+          <minint xmi:type="uml:LiteralInteger" xmi:id="_-BNBcbOnEeWRj4_0AQBvoQ"/>
+        </guard>
+      </operand>
+    </fragment>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-NfWcJ5dEeWkJphyxrIkmg" name="ActionExecSpec0Finish" covered="_n4XHgJ5dEeWkJphyxrIkmg" execution="_-NevYJ5dEeWkJphyxrIkmg"/>
-    <message xmi:type="uml:Message" xmi:id="_4UgJ0J5dEeWkJphyxrIkmg" name="search(String query)" receiveEvent="_4UwogJ5dEeWkJphyxrIkmg" sendEvent="_4UuzUJ5dEeWkJphyxrIkmg" signature="_wjVTkJ5dEeWkJphyxrIkmg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_y6RJQLOnEeWRj4_0AQBvoQ" name="ActionExecSpec2Start"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_vB5wkLOnEeWRj4_0AQBvoQ" name="ActionExecSpec1Start" covered="_L_R7ULOnEeWRj4_0AQBvoQ"/>
     <message xmi:type="uml:Message" xmi:id="_RCqFoJ5eEeWkJphyxrIkmg" name="new API()" messageSort="createMessage" receiveEvent="_RCr60J5eEeWkJphyxrIkmg" sendEvent="_RCrTwJ5eEeWkJphyxrIkmg"/>
-    <message xmi:type="uml:Message" xmi:id="_UOSUIJ5eEeWkJphyxrIkmg" name="new SearchService()" messageSort="createMessage" receiveEvent="_UOUwYJ5eEeWkJphyxrIkmg" sendEvent="_UOUJUJ5eEeWkJphyxrIkmg"/>
+    <message xmi:type="uml:Message" xmi:id="_UWIRgLOnEeWRj4_0AQBvoQ" name="new MonitorService()" messageSort="createMessage" receiveEvent="_UWmLkLOnEeWRj4_0AQBvoQ" sendEvent="_UWlkgLOnEeWRj4_0AQBvoQ" signature="_UVyTQLOnEeWRj4_0AQBvoQ"/>
+    <message xmi:type="uml:Message" xmi:id="_1m1dMLOnEeWRj4_0AQBvoQ" name="addMonitorization()" receiveEvent="_1m2rULOnEeWRj4_0AQBvoQ" sendEvent="_1m2EQLOnEeWRj4_0AQBvoQ" signature="_nLPWULOnEeWRj4_0AQBvoQ"/>
+    <message xmi:type="uml:Message" xmi:id="_5vt-ILOnEeWRj4_0AQBvoQ" name="ok" messageSort="reply" receiveEvent="_5vulMbOnEeWRj4_0AQBvoQ" sendEvent="_5vulMLOnEeWRj4_0AQBvoQ" signature="_5vYm8LOnEeWRj4_0AQBvoQ"/>
+    <message xmi:type="uml:Message" xmi:id="_WVP0ILOoEeWRj4_0AQBvoQ" name="new TwitterOperations()" messageSort="createMessage" receiveEvent="_WVQbMbOoEeWRj4_0AQBvoQ" sendEvent="_WVQbMLOoEeWRj4_0AQBvoQ" signature="_WU85MLOoEeWRj4_0AQBvoQ"/>
+    <message xmi:type="uml:Message" xmi:id="_e__9wLOoEeWRj4_0AQBvoQ" name="getUserProfile_Message" receiveEvent="_fABL4LOoEeWRj4_0AQBvoQ" sendEvent="_fAAk0LOoEeWRj4_0AQBvoQ" signature="_5k8Y4LOkEeWRj4_0AQBvoQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kliPYJ5eEeWkJphyxrIkmg" name="String"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_l4o2AJ5eEeWkJphyxrIkmg" name="DataType"/>
+  <packagedElement xmi:type="uml:Signal" xmi:id="_UVyTQLOnEeWRj4_0AQBvoQ" name="monitorService"/>
 </uml:Model>
