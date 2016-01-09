@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qYmo8J5YEeWTvImi9CrFGg" name="ClassDiagram">
   <packagedElement xmi:type="uml:Class" xmi:id="_u19TIJ5aEeWkJphyxrIkmg" name="API">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_sEX08J5dEeWkJphyxrIkmg" name="search">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_yVtlQJ5fEeWkJphyxrIkmg" name="query" type="_kliPYJ5eEeWkJphyxrIkmg"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Zuv4J5fEeWkJphyxrIkmg" name="list" type="_nH3woJ5bEeWkJphyxrIkmg" direction="return">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3HZyoJ5fEeWkJphyxrIkmg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3Hbn0J5fEeWkJphyxrIkmg" value="*"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_4UR1cJ5fEeWkJphyxrIkmg" name="getPolitcalParty">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Akms4J5gEeWkJphyxrIkmg" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_D_BlUJ5gEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return"/>
@@ -24,53 +17,58 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Ep96oLOnEeWRj4_0AQBvoQ" name="monitorize"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_6NGvoLOlEeWRj4_0AQBvoQ" name="monitorize"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_nLPWULOnEeWRj4_0AQBvoQ" name="addMonitorization"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6NGvoLOlEeWRj4_0AQBvoQ" name="monitorize">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HS9TELb9EeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_5vYm8LOnEeWRj4_0AQBvoQ" name="ok"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_3ay9ELPGEeWt1qKm8cLisw" name="getStatistic" visibility="private"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="__3b3IJ5aEeWkJphyxrIkmg" name="SearchService">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_wjVTkJ5dEeWkJphyxrIkmg" name="search">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6lZYJ5fEeWkJphyxrIkmg" name="query" type="_kliPYJ5eEeWkJphyxrIkmg">
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_A6lZYZ5fEeWkJphyxrIkmg" name="empty" value=""/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UXOYQJ5fEeWkJphyxrIkmg" name="list" type="_nH3woJ5bEeWkJphyxrIkmg" direction="return">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZBLl8J5fEeWkJphyxrIkmg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZBNbIJ5fEeWkJphyxrIkmg" value="*"/>
-        <defaultValue xmi:type="uml:LiteralNull" xmi:id="_UXOYQZ5fEeWkJphyxrIkmg" name="list"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ1eULOmEeWRj4_0AQBvoQ" name="getPolitcalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_s-HGQLb8EeWiBbNLOy-OEw" name="politicalParty" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vCnUoLb8EeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yEdYELOmEeWRj4_0AQBvoQ" name="getPoliticalParties">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hPs-YLb8EeWiBbNLOy-OEw" name="list" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mJwdkLb8EeWiBbNLOy-OEw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mJzg4Lb8EeWiBbNLOy-OEw" value="*"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_z4zqkLOmEeWRj4_0AQBvoQ" name="addPoliticalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_fSAbQLb_EeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ1eULOmEeWRj4_0AQBvoQ" name="getPolitcalParty"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_yEdYELOmEeWRj4_0AQBvoQ" name="getPoliticalParties"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_z4zqkLOmEeWRj4_0AQBvoQ" name="addPoliticalParty"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_HaBe0J5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_84Me0J5aEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_H2ta0J5bEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="__3b3IJ5aEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_IZG9QJ5bEeWkJphyxrIkmg" client="_u19TIJ5aEeWkJphyxrIkmg" supplier="_BXnQcJ5bEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_MVWJUJ5bEeWkJphyxrIkmg" name="PoliticalPartyMySQLRepository">
-    <generalization xmi:type="uml:Generalization" xmi:id="_s-LcsJ5bEeWkJphyxrIkmg" general="_qoBdoJ5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVWJUJ5bEeWkJphyxrIkmg" name="MySQLConnection">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ev0-cLcDEeWiBbNLOy-OEw" name="DB_HOST" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg" isReadOnly="true"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lmetMLcDEeWiBbNLOy-OEw" name="DB_PORT" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg" isReadOnly="true"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qP-n4LcDEeWiBbNLOy-OEw" name="DB_USER" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg" isReadOnly="true"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vAfwkLcDEeWiBbNLOy-OEw" name="DB_PASSWORD" visibility="private" type="_B9WHALcCEeWiBbNLOy-OEw" isReadOnly="true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kp1CQLcEEeWiBbNLOy-OEw" name="getConnection"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Quy10J5bEeWkJphyxrIkmg" name="java.sql"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_SlvwYJ5bEeWkJphyxrIkmg" name="jdbc"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_Vh3jQJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_SlvwYJ5bEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_WGQpwJ5bEeWkJphyxrIkmg" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Vh3jQJ5bEeWkJphyxrIkmg" client="_lmetMLcDEeWiBbNLOy-OEw _vAfwkLcDEeWiBbNLOy-OEw _qP-n4LcDEeWiBbNLOy-OEw" supplier="_qYmo8J5YEeWTvImi9CrFGg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_WGQpwJ5bEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg _58DfMLcDEeWiBbNLOy-OEw" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_iN1fkJ5bEeWkJphyxrIkmg" name="PoliticalParty">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_18nIkJ5hEeWkJphyxrIkmg" name="name" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8avpoJ5hEeWkJphyxrIkmg" name="statistics" visibility="private" type="_F4dI8J5cEeWkJphyxrIkmg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__kGAMJ5hEeWkJphyxrIkmg"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__kIccJ5hEeWkJphyxrIkmg" value="*"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_EXzm0J5iEeWkJphyxrIkmg" name="web" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_EggPELPHEeWt1qKm8cLisw" name="getName"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_GOwgoLPHEeWt1qKm8cLisw" name="getStatistics"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_HeAiALPHEeWt1qKm8cLisw" name="getWeb"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_KA6joLPHEeWt1qKm8cLisw" name="setStatistics"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_nH3woJ5bEeWkJphyxrIkmg" name="PoliticalTweet">
-    <generalization xmi:type="uml:Generalization" xmi:id="_UaGNcJ5cEeWkJphyxrIkmg" general="_SdA1sJ5cEeWkJphyxrIkmg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_seOGEJ5iEeWkJphyxrIkmg" name="text"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EXzm0J5iEeWkJphyxrIkmg" name="url" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EggPELPHEeWt1qKm8cLisw" name="getName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_otDHcLcBEeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_GOwgoLPHEeWt1qKm8cLisw" name="getStatistics">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0FipsLcBEeWiBbNLOy-OEw" name="list" type="_F4dI8J5cEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0ryKULcBEeWiBbNLOy-OEw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0rzYcLcBEeWiBbNLOy-OEw" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HeAiALPHEeWt1qKm8cLisw" name="getUrl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rm1YALcBEeWiBbNLOy-OEw" name="url" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_qoBdoJ5bEeWkJphyxrIkmg" name="PoliticalPartyRepository">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_nDU1kJ5gEeWkJphyxrIkmg" name="getPoliticalPartyByName">
@@ -96,46 +94,71 @@
   <packagedElement xmi:type="uml:Dependency" xmi:id="_wKEJ4J5bEeWkJphyxrIkmg" client="_qoBdoJ5bEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_6lniwJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_76HQgJ5bEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_9ew6IJ5bEeWkJphyxrIkmg" client="__3b3IJ5aEeWkJphyxrIkmg" supplier="_nH3woJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_-qY_wJ5bEeWkJphyxrIkmg" client="_BXnQcJ5bEeWkJphyxrIkmg" supplier="_qoBdoJ5bEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_AOcMcJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_qYmo8J5YEeWTvImi9CrFGg"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_F4dI8J5cEeWkJphyxrIkmg" name="Statistic">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_blB7YJ5iEeWkJphyxrIkmg" name="date" visibility="private"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_e1TZUJ5iEeWkJphyxrIkmg" name="followers" visibility="private"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_mbGtEJ5iEeWkJphyxrIkmg" name="tweets" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_blB7YJ5iEeWkJphyxrIkmg" name="datetime" visibility="private" type="_5x220LcCEeWiBbNLOy-OEw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_e1TZUJ5iEeWkJphyxrIkmg" name="followers" visibility="private" type="_B9WHALcCEeWiBbNLOy-OEw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mbGtEJ5iEeWkJphyxrIkmg" name="tweets" visibility="private" type="_B9WHALcCEeWiBbNLOy-OEw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2C-xULcCEeWiBbNLOy-OEw" name="getDatetime">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_GD7FYLcDEeWiBbNLOy-OEw" name="datetime" type="_5x220LcCEeWiBbNLOy-OEw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_GwTqQLcDEeWiBbNLOy-OEw" name="getFollowers">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JdJrALcDEeWiBbNLOy-OEw" name="followers" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Kay_ALcDEeWiBbNLOy-OEw" name="getTweets">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Oa2UELcDEeWiBbNLOy-OEw" name="tweets" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_Gl1zYJ5cEeWkJphyxrIkmg" name="org.springframework.social.twitter.api">
-    <packagedElement xmi:type="uml:Class" xmi:id="_SdA1sJ5cEeWkJphyxrIkmg" name="Tweet">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1fCmUJ5iEeWkJphyxrIkmg" name="text" type="_kliPYJ5eEeWkJphyxrIkmg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_44xiQJ5iEeWkJphyxrIkmg" name="retweets"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_6Zj_kJ5iEeWkJphyxrIkmg" name="favs"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_FVHHIJ5jEeWkJphyxrIkmg" name="user"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_IOl1sJ5jEeWkJphyxrIkmg" name="date"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Q0bpMLOjEeWRj4_0AQBvoQ" name="TwitterOperations">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hFnYsLOjEeWRj4_0AQBvoQ" name="consumerKey" type="_kliPYJ5eEeWkJphyxrIkmg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_iYNpALOjEeWRj4_0AQBvoQ" name="consumerSecret" type="_kliPYJ5eEeWkJphyxrIkmg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_i-xSsLOjEeWRj4_0AQBvoQ" name="accessToken" type="_kliPYJ5eEeWkJphyxrIkmg"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_A-hD8LOkEeWRj4_0AQBvoQ" name="searchOperations"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_5k8Y4LOkEeWRj4_0AQBvoQ" name="getUserProfile"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_UPXpwLPJEeWt1qKm8cLisw" name="validateCredentials" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5k8Y4LOkEeWRj4_0AQBvoQ" name="getUserProfile">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_lLmr4Lb_EeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UPXpwLPJEeWt1qKm8cLisw" name="validateCredentials" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fi0-ILcCEeWiBbNLOy-OEw" name="valid" type="_PtSo0LcCEeWiBbNLOy-OEw" direction="return">
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_fi0-IbcCEeWiBbNLOy-OEw" name="valid"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Gm5owLOkEeWRj4_0AQBvoQ" name="TwitterProfile">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_hHyRALOlEeWRj4_0AQBvoQ" name="id"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_oVdYoLOlEeWRj4_0AQBvoQ" name="screeName"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_qDtDILOlEeWRj4_0AQBvoQ" name="name"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_sKz5kLOlEeWRj4_0AQBvoQ" name="url"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_tR1MALOlEeWRj4_0AQBvoQ" name="description"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MNCK0LOkEeWRj4_0AQBvoQ" name="getFavotitesCount"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_y3m-MLOkEeWRj4_0AQBvoQ" name="getTweetsCount"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JP0WULOlEeWRj4_0AQBvoQ" name="getFriendsCount"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_K4-sgLOlEeWRj4_0AQBvoQ" name="getFollowersCount"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hHyRALOlEeWRj4_0AQBvoQ" name="id" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qDtDILOlEeWRj4_0AQBvoQ" name="name" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sKz5kLOlEeWRj4_0AQBvoQ" name="url" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_tR1MALOlEeWRj4_0AQBvoQ" name="description" visibility="private" type="_kliPYJ5eEeWkJphyxrIkmg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MNCK0LOkEeWRj4_0AQBvoQ" name="getFavotitesCount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AtXF0LcCEeWiBbNLOy-OEw" name="favs" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_y3m-MLOkEeWRj4_0AQBvoQ" name="getTweetsCount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JHk5ELcCEeWiBbNLOy-OEw" name="tweets" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JP0WULOlEeWRj4_0AQBvoQ" name="getFriendsCount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LACPgLcCEeWiBbNLOy-OEw" name="friends" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_K4-sgLOlEeWRj4_0AQBvoQ" name="getFollowersCount">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NyvnsLcCEeWiBbNLOy-OEw" name="followers" type="_B9WHALcCEeWiBbNLOy-OEw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_mHTXwLcCEeWiBbNLOy-OEw" name="getId">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ooHusLcCEeWiBbNLOy-OEw" name="id" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pubPcLcCEeWiBbNLOy-OEw" name="getName">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r83c8LcCEeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_skW6wLcCEeWiBbNLOy-OEw" name="getUrl">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ulivYLcCEeWiBbNLOy-OEw" name="url" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vVHyMLcCEeWiBbNLOy-OEw" name="getDescription">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xvQ5YLcCEeWiBbNLOy-OEw" name="description" type="_kliPYJ5eEeWkJphyxrIkmg" direction="return"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Signal" xmi:id="_WU85MLOoEeWRj4_0AQBvoQ" name="new TwitterOperations()"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_KrZ6kJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_MB2JEJ5cEeWkJphyxrIkmg" client="_BXnQcJ5bEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_MB2JEJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_w-k6kJ5cEeWkJphyxrIkmg" memberEnd="_w_gHoJ5cEeWkJphyxrIkmg _w_hVwJ5cEeWkJphyxrIkmg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w-pMAJ5cEeWkJphyxrIkmg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w-pzEJ5cEeWkJphyxrIkmg" key="nature" value="UML_Nature"/>
@@ -148,7 +171,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_myMJoJ5dEeWkJphyxrIkmg" name="Interaction1">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_n4XukJ5dEeWkJphyxrIkmg" name="" type="_u19TIJ5aEeWkJphyxrIkmg"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_pbaOoJ5dEeWkJphyxrIkmg" name="" type="__3b3IJ5aEeWkJphyxrIkmg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pbaOoJ5dEeWkJphyxrIkmg" name=""/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_L_SiYLOnEeWRj4_0AQBvoQ" name="" type="_84Me0J5aEeWkJphyxrIkmg"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_Rwf2kLOoEeWRj4_0AQBvoQ" name="" type="_Q0bpMLOjEeWRj4_0AQBvoQ"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_7g4zQLPHEeWt1qKm8cLisw" name="" type="_qoBdoJ5bEeWkJphyxrIkmg"/>
@@ -248,7 +271,30 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_l4o2AJ5eEeWkJphyxrIkmg" name="DataType">
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kliPYJ5eEeWkJphyxrIkmg" name="String"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_B9WHALcCEeWiBbNLOy-OEw" name="Integer"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_PtSo0LcCEeWiBbNLOy-OEw" name="Boolean"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_5x220LcCEeWiBbNLOy-OEw" name="Datetime"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Signal" xmi:id="_UVyTQLOnEeWRj4_0AQBvoQ" name="monitorService"/>
   <packagedElement xmi:type="uml:Signal" xmi:id="_-7iVMLPHEeWt1qKm8cLisw" name="new PoliticalPartyRepository"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_58DfMLcDEeWiBbNLOy-OEw" name="PoliticalPartyMySQLRepository">
+    <generalization xmi:type="uml:Generalization" xmi:id="_s-LcsJ5bEeWkJphyxrIkmg" general="_qoBdoJ5bEeWkJphyxrIkmg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_szcNsLcEEeWiBbNLOy-OEw" name="getPoliticalPartyByName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3hYXELcEEeWiBbNLOy-OEw" name="politicalParty" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uuzuMLcEEeWiBbNLOy-OEw" name="getPoliticalParties">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ffuALcEEeWiBbNLOy-OEw" name="list" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_69AJYLcEEeWiBbNLOy-OEw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_69BXgLcEEeWiBbNLOy-OEw" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_waSYkLcEEeWiBbNLOy-OEw" name="addPoliticalParty">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_9RWxoLcEEeWiBbNLOy-OEw" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yak1ULcEEeWiBbNLOy-OEw" name="updateStatistics">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="__cIAELcEEeWiBbNLOy-OEw" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_eDOhsLcEEeWiBbNLOy-OEw" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_hJKX4LcEEeWiBbNLOy-OEw" client="_58DfMLcDEeWiBbNLOy-OEw" supplier="_MVWJUJ5bEeWkJphyxrIkmg"/>
 </uml:Model>
