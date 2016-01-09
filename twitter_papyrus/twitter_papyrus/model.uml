@@ -17,11 +17,15 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Ep96oLOnEeWRj4_0AQBvoQ" name="monitorize"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_84Me0J5aEeWkJphyxrIkmg" name="MonitorService">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_6NGvoLOlEeWRj4_0AQBvoQ" name="monitorize">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_HS9TELb9EeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
-    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6NGvoLOlEeWRj4_0AQBvoQ" name="monitorizePoliticalParties"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_5vYm8LOnEeWRj4_0AQBvoQ" name="ok"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_3ay9ELPGEeWt1qKm8cLisw" name="getStatistic" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3ay9ELPGEeWt1qKm8cLisw" name="monitorize" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BFxpALcGEeWiBbNLOy-OEw" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1eSBcLcFEeWiBbNLOy-OEw" name="getStatistic" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_G0SrALcGEeWiBbNLOy-OEw" name="twitterProfile" type="_Gm5owLOkEeWRj4_0AQBvoQ"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JbKmoLcGEeWiBbNLOy-OEw" name="statistic" type="_F4dI8J5cEeWkJphyxrIkmg" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_BXnQcJ5bEeWkJphyxrIkmg" name="PoliticalPartiesService">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_wQ1eULOmEeWRj4_0AQBvoQ" name="getPolitcalParty">
@@ -72,7 +76,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_qoBdoJ5bEeWkJphyxrIkmg" name="PoliticalPartyRepository">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_nDU1kJ5gEeWkJphyxrIkmg" name="getPoliticalPartyByName">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_q-56UJ5gEeWkJphyxrIkmg" name="name"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_q-56UJ5gEeWkJphyxrIkmg" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_-_QDMJ5gEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__lN3AJ5gEeWkJphyxrIkmg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__lPFIJ5gEeWkJphyxrIkmg" value="1"/>
@@ -87,8 +91,9 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Wyq1EJ5hEeWkJphyxrIkmg" name="addPoliticalParty">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_avgeEJ5hEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ht6aoJ5hEeWkJphyxrIkmg" name="updateStatistics">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ht6aoJ5hEeWkJphyxrIkmg" name="addStatistics">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_kvgjYJ5hEeWkJphyxrIkmg" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_abt9kLcGEeWiBbNLOy-OEw" name="statistic" type="_F4dI8J5cEeWkJphyxrIkmg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_wKEJ4J5bEeWkJphyxrIkmg" client="_qoBdoJ5bEeWkJphyxrIkmg" supplier="_iN1fkJ5bEeWkJphyxrIkmg"/>
@@ -157,7 +162,7 @@
     <packagedElement xmi:type="uml:Signal" xmi:id="_WU85MLOoEeWRj4_0AQBvoQ" name="new TwitterOperations()"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_KrZ6kJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_84Me0J5aEeWkJphyxrIkmg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_LiDOsJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_MB2JEJ5cEeWkJphyxrIkmg" client="_qYmo8J5YEeWTvImi9CrFGg" supplier="_Gl1zYJ5cEeWkJphyxrIkmg"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_w-k6kJ5cEeWkJphyxrIkmg" memberEnd="_w_gHoJ5cEeWkJphyxrIkmg _w_hVwJ5cEeWkJphyxrIkmg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w-pMAJ5cEeWkJphyxrIkmg" source="org.eclipse.papyrus">
@@ -281,6 +286,7 @@
     <generalization xmi:type="uml:Generalization" xmi:id="_s-LcsJ5bEeWkJphyxrIkmg" general="_qoBdoJ5bEeWkJphyxrIkmg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_szcNsLcEEeWiBbNLOy-OEw" name="getPoliticalPartyByName">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_3hYXELcEEeWiBbNLOy-OEw" name="politicalParty" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jd9aILcGEeWiBbNLOy-OEw" name="name" type="_kliPYJ5eEeWkJphyxrIkmg"/>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_uuzuMLcEEeWiBbNLOy-OEw" name="getPoliticalParties">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6ffuALcEEeWiBbNLOy-OEw" name="list" type="_iN1fkJ5bEeWkJphyxrIkmg" direction="return">
@@ -291,8 +297,9 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_waSYkLcEEeWiBbNLOy-OEw" name="addPoliticalParty">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_9RWxoLcEEeWiBbNLOy-OEw" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_yak1ULcEEeWiBbNLOy-OEw" name="updateStatistics">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yak1ULcEEeWiBbNLOy-OEw" name="addStatistics">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="__cIAELcEEeWiBbNLOy-OEw" name="party" type="_iN1fkJ5bEeWkJphyxrIkmg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_c8pCMLcGEeWiBbNLOy-OEw" name="statistic" type="_F4dI8J5cEeWkJphyxrIkmg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_eDOhsLcEEeWiBbNLOy-OEw" client="_MVWJUJ5bEeWkJphyxrIkmg" supplier="_Quy10J5bEeWkJphyxrIkmg"/>
