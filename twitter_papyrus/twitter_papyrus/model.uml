@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:PAM="http://www.eclipse.org/papyrus/PAM/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/PAM/1 http://www.eclipse.org/papyrus/MARTE/1#//PAM">
   <uml:Model xmi:id="_qYmo8J5YEeWTvImi9CrFGg" name="ClassDiagram">
     <packagedElement xmi:type="uml:Class" xmi:id="_u19TIJ5aEeWkJphyxrIkmg" name="API">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_4UR1cJ5fEeWkJphyxrIkmg" name="getPolitcalParty">
@@ -321,7 +321,7 @@
         <operand xmi:type="uml:InteractionOperand" xmi:id="_6U1gQLd_EeWQS-cWm5WUWQ" name="InteractionOperand" covered="_81L9ILd_EeWQS-cWm5WUWQ _9dmA8Ld_EeWQS-cWm5WUWQ _-YVK4Ld_EeWQS-cWm5WUWQ _8FrLwLd_EeWQS-cWm5WUWQ">
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GJG_kLeAEeWQS-cWm5WUWQ" name="monitorizePoliticalParties_MessageRecv" covered="_8FrLwLd_EeWQS-cWm5WUWQ" message="_GJGYgLeAEeWQS-cWm5WUWQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_un2fQLeAEeWQS-cWm5WUWQ" name="ActionExecSpecStart" covered="_8FrLwLd_EeWQS-cWm5WUWQ" execution="_un3GULeAEeWQS-cWm5WUWQ"/>
-          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_un3GULeAEeWQS-cWm5WUWQ" name="ActionExecSpec" covered="_8FrLwLd_EeWQS-cWm5WUWQ" finish="_un3tYLeAEeWQS-cWm5WUWQ" start="_un2fQLeAEeWQS-cWm5WUWQ"/>
+          <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_un3GULeAEeWQS-cWm5WUWQ" name="M1" covered="_8FrLwLd_EeWQS-cWm5WUWQ" finish="_un3tYLeAEeWQS-cWm5WUWQ" start="_un2fQLeAEeWQS-cWm5WUWQ"/>
           <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_un3tYLeAEeWQS-cWm5WUWQ" name="ActionExecSpecFinish" covered="_8FrLwLd_EeWQS-cWm5WUWQ" execution="_un3GULeAEeWQS-cWm5WUWQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yFo0wbeAEeWQS-cWm5WUWQ" name="getPoliticalParties_MessageSend" covered="_8FrLwLd_EeWQS-cWm5WUWQ" message="_yFo0wLeAEeWQS-cWm5WUWQ"/>
           <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yFqp8LeAEeWQS-cWm5WUWQ" name="getPoliticalParties_MessageRecv" covered="_9dmA8Ld_EeWQS-cWm5WUWQ" message="_yFo0wLeAEeWQS-cWm5WUWQ"/>
@@ -812,4 +812,11 @@
   <GQAM:GaExecHost xmi:id="_tyRhILeLEeWQS-cWm5WUWQ" resMult="2" base_Classifier="_ietNELeJEeWQS-cWm5WUWQ" speedFactor="$sf2"/>
   <GQAM:GaExecHost xmi:id="_zyNqULeLEeWQS-cWm5WUWQ" resMult="1000&#xD;&#xA;" base_Classifier="_jP8cwLeJEeWQS-cWm5WUWQ" speedFactor="$sf3"/>
   <GQAM:GaExecHost xmi:id="_5Ebx4LeLEeWQS-cWm5WUWQ" base_Classifier="_KUjgwLeKEeWQS-cWm5WUWQ" speedFactor="$sf4&#xD;&#xA;"/>
+  <PAM:PaRunTInstance xmi:id="_-jRRwLeOEeWQS-cWm5WUWQ" poolSize="$N1" host="_mYJR4LeLEeWQS-cWm5WUWQ" base_NamedElement="_8FrLwLd_EeWQS-cWm5WUWQ"/>
+  <GQAM:GaCommStep xmi:id="_P9ee0LePEeWQS-cWm5WUWQ" base_NamedElement="_yFo0wLeAEeWQS-cWm5WUWQ" base_Message="_yFo0wLeAEeWQS-cWm5WUWQ">
+    <msgSize>0</msgSize>
+  </GQAM:GaCommStep>
+  <GQAM:GaStep xmi:id="_j3hycLePEeWQS-cWm5WUWQ" base_NamedElement="_un3GULeAEeWQS-cWm5WUWQ">
+    <hostDemandOps>15</hostDemandOps>
+  </GQAM:GaStep>
 </xmi:XMI>
